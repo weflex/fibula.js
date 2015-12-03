@@ -1,0 +1,8 @@
+{
+  "adapter": "mongo",
+  "data": [
+    {
+      "foo": "bar"
+    }
+  ]
+}

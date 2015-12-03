@@ -28,3 +28,24 @@ describe('case1', function () {
     });
   });
 });
+
+describe('multi-files', function () {
+  before(function () {
+    fixtures.use('multi-files');
+  });
+  it('test the foo.json', function (next) {
+    db.collection('foo').find({}).toArray(function (err, docs) {
+      assert.equal(docs.length, 1);
+      assert.equal(docs[0].foo, 'bar');
+      assert.equal(docs[0].name, undefined);
+      next();
+    });
+  });
+  it('test the bar.json', function (next) {
+    db.collection('bar').find({}).toArray(function (err, docs) {
+      assert.equal(docs.length, 1);
+      assert.equal(docs[0].bar, 123);
+      next();
+    });
+  });
+});
