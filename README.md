@@ -2,6 +2,8 @@
 
 A **fixtures** framework for Node.js
 
+[![Build Status](https://travis-ci.org/weflex/fibula.svg)](https://travis-ci.org/weflex/fibula)
+
 ## Install
 
 ```sh
