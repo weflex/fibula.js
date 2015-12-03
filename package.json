@@ -24,5 +24,8 @@
   "devDependencies": {
     "mocha": "^2.3.4",
     "mongodb": "^2.0.49"
+  },
+  "dependencies": {
+    "glob": "^6.0.1"
   }
 }
