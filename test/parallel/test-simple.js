@@ -35,6 +35,7 @@ describe('multi-files', function () {
   });
   it('test the foo.json', function (next) {
     db.collection('foo').find({}).toArray(function (err, docs) {
+      console.log(err);
       assert.equal(docs.length, 1);
       assert.equal(docs[0].foo, 'bar');
       assert.equal(docs[0].name, undefined);
