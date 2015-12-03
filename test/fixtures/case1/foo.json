@@ -1,0 +1,11 @@
+{
+  "adapter": "mongo",
+  "data": [
+    {
+      "name": "foo"
+    },
+    {
+      "name": "bar"
+    }
+  ]
+}

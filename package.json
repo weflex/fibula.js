@@ -1,0 +1,28 @@
+{
+  "name": "fibula",
+  "version": "1.0.0",
+  "description": "A **fixtures** framework for Node.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha test/parallel/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/weflex/fibula.git"
+  },
+  "keywords": [
+    "test",
+    "fixtures",
+    "mocha"
+  ],
+  "author": "Yorkie Liu <yorkiefixer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weflex/fibula/issues"
+  },
+  "homepage": "https://github.com/weflex/fibula#readme",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "mongodb": "^2.0.49"
+  }
+}
