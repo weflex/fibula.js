@@ -15,7 +15,9 @@ before(function (next) {
 });
 
 after(function () {
-  db.close();
+  if (db && db.close) {
+    db.close();
+  }
 });
 
 describe('case1', function () {
