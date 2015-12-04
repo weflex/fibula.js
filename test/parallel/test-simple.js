@@ -31,6 +31,20 @@ describe('case1', function () {
   });
 });
 
+describe('case1 in before each', function () {
+  beforeEach(function () {
+    fixtures.use('case1');
+  });
+  it('test the documents', function (next) {
+    db.collection('foo').find({}).toArray(function (err, docs) {
+      assert.equal(docs.length, 2);
+      assert.equal(docs[0].name, 'foo');
+      assert.equal(docs[1].name, 'bar');
+      next();
+    });
+  });
+});
+
 describe('multi-files', function () {
   before(function () {
     fixtures.use('multi-files');
