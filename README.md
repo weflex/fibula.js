@@ -59,8 +59,8 @@ to see the usage.
 
 [MIT](./LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/fibula.js.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/fibula.js
+[npm-image]: https://img.shields.io/npm/v/fibula.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/fibula
 [travis-image]: https://img.shields.io/travis/weflex/fibula.js.svg?style=flat-square
 [travis-url]: https://travis-ci.org/weflex/fibula.js
 [david-image]: http://img.shields.io/david/weflex/fibula.js.svg?style=flat-square
