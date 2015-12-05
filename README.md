@@ -1,6 +1,9 @@
 # Fibula.js
 
-[![Build Status](https://travis-ci.org/weflex/fibula.svg)](https://travis-ci.org/weflex/fibula)
+[![NPM version][npm-image]][npm-url]
+[![Build status][travis-image]][travis-url]
+[![Dependency Status][david-image]][david-url]
+[![Downloads][downloads-image]][downloads-url]
 
 A **fixtures** library to integrate with other test frameworks like [mocha](https://mochajs.org). Fibula.js will be helping
 you to write your test based on data you defined.
@@ -55,3 +58,13 @@ to see the usage.
 ## License
 
 [MIT](./LICENSE)
+
+[npm-image]: https://img.shields.io/npm/v/fibula.js.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/fibula.js
+[travis-image]: https://img.shields.io/travis/weflex/fibula.js.svg?style=flat-square
+[travis-url]: https://travis-ci.org/weflex/fibula.js
+[david-image]: http://img.shields.io/david/weflex/fibula.js.svg?style=flat-square
+[david-url]: https://david-dm.org/weflex/fibula.js
+[downloads-image]: http://img.shields.io/npm/dm/fibula.js.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/fibula.js
+
