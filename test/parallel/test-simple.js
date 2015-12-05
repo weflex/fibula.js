@@ -45,13 +45,25 @@ describe('case1 in before each', function () {
   });
 });
 
+describe('js-file', function () {
+  beforeEach(function () {
+    fixtures.use('js-file');
+  });
+  it('test the foo.js', function (next) {
+    db.collection('foo').find({}).toArray(function (err, docs) {
+      assert.equal(docs.length, 1);
+      assert.ok(docs[0].date instanceof Date);
+      next();
+    });
+  });
+});
+
 describe('multi-files', function () {
   before(function () {
     fixtures.use('multi-files');
   });
   it('test the foo.json', function (next) {
     db.collection('foo').find({}).toArray(function (err, docs) {
-      console.log(err, docs);
       assert.equal(docs.length, 1);
       assert.equal(docs[0].foo, 'bar');
       assert.equal(docs[0].name, undefined);
