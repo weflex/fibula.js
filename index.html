@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Fibula.js by weflex</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Fibula.js</h1>
+        <h2>A fixtures library to integrate with other test frameworks like mocha.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/weflex/fibula.js/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/weflex/fibula.js/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/weflex/fibula.js" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="fibulajs" class="anchor" href="#fibulajs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fibula.js</h1>
+
+<p><a href="https://npmjs.org/package/fibula"><img src="https://img.shields.io/npm/v/fibula.svg?style=flat-square" alt="NPM version"></a>
+<a href="https://travis-ci.org/weflex/fibula.js"><img src="https://img.shields.io/travis/weflex/fibula.js.svg?style=flat-square" alt="Build status"></a>
+<a href="https://david-dm.org/weflex/fibula.js"><img src="http://img.shields.io/david/weflex/fibula.js.svg?style=flat-square" alt="Dependency Status"></a>
+<a href="https://npmjs.org/package/fibula.js"><img src="http://img.shields.io/npm/dm/fibula.js.svg?style=flat-square" alt="Downloads"></a></p>
+
+<p>A <strong>fixtures</strong> library to integrate with other test frameworks like <a href="https://mochajs.org">mocha</a>. Fibula.js will be helping
+you to write your test based on data you defined.</p>
+
+<p>Usually in developing products at <a href="https://github.com/weflex">WeFlex</a>, we borrow the LoopBack, the powerful RESTFul
+framework, to build our API service, and making test case in <a href="https://mochajs.org">Mochajs</a>. With growing up of our
+bussiness logic, the more we write, the more complcate we have test cases, and especially some of test case is not 
+idempotent and not indenpendent.</p>
+
+<p>So Fubila.js saved us, <a href="https://github.com/weflex">the WeFlex team</a>, from the hell of writing dependencies specs.</p>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<div class="highlight highlight-source-shell"><pre>$ npm install fibula</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>See <a href="test/fixtures">test/fixtures</a> and <a href="test/parallel">test/parallel</a>.</p>
+
+<h3>
+<a id="write-a-fixture" class="anchor" href="#write-a-fixture" aria-hidden="true"><span class="octicon octicon-link"></span></a>Write a fixture</h3>
+
+<div class="highlight highlight-source-json"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>adapter<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>mongo<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>: [
+    {
+      <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>bar<span class="pl-pds">"</span></span>
+    },
+    {
+      <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>foo<span class="pl-pds">"</span></span>
+    }
+  ]
+}</pre></div>
+
+<h3>
+<a id="using-the-fixture" class="anchor" href="#using-the-fixture" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using the fixture</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">fixtures</span>.<span class="pl-en">use</span>(<span class="pl-s"><span class="pl-pds">'</span>case1<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>Then you will get the <code>data</code> in your database.</p>
+
+<h3>
+<a id="typed-fixture" class="anchor" href="#typed-fixture" aria-hidden="true"><span class="octicon octicon-link"></span></a>Typed fixture</h3>
+
+<p>Usually the fixutures seems to be consist of <code>.json</code> files, namely only string can be defined. Fibula.js as well
+as supports a flexible to let you define types by parsing <code>.js</code> file. see <a href="test/fixtures/js-file">test/fixtures/js-file</a>
+to see the usage.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="./LICENSE">MIT</a></p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
