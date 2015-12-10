@@ -1,6 +1,6 @@
 {
   "name": "fibula",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "A **fixtures** framework for Node.js",
   "main": "lib/index.js",
   "scripts": {
