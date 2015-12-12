@@ -25,7 +25,9 @@ $ npm install fibula
 
 See [test/fixtures](test/fixtures) and [test/parallel](test/parallel).
 
-### Write a fixture
+### Write fixtures
+
+Write the below as our first fixture named as "name/model1.json"
 
 ```json
 {
@@ -48,6 +50,29 @@ fixtures.use('case1');
 ```
 
 Then you will get the `data` in your database.
+
+If you want to access to variables which you puts to databases, then you should use `fixture.get` instead of
+loading them manually.
+
+```js
+const data = fixtures.get('model1');
+console.log(data);
+```
+
+The above code would output:
+
+```
+[
+  {
+    "name": "bar"
+  },
+  {
+    "name": "foo"
+  }
+]
+```
+
+which is defined at [Write fixtures](#write-fixtures) by us.
 
 ### Typed fixture
 

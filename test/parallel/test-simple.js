@@ -64,16 +64,21 @@ describe('multi-files', function () {
   });
   it('test the foo.json', function (next) {
     db.collection('foo').find({}).toArray(function (err, docs) {
+      const expect = fixtures.get('foo');
       assert.equal(docs.length, 1);
-      assert.equal(docs[0].foo, 'bar');
-      assert.equal(docs[0].name, undefined);
+      assert.ok(docs[0]._id);
+      delete docs[0]._id;
+      assert.deepEqual(docs, expect);
       next();
     });
   });
   it('test the bar.json', function (next) {
     db.collection('bar').find({}).toArray(function (err, docs) {
+      const expect = fixtures.get('bar');
       assert.equal(docs.length, 1);
-      assert.equal(docs[0].bar, 123);
+      assert.ok(docs[0]._id);
+      delete docs[0]._id;
+      assert.deepEqual(docs, expect);
       next();
     });
   });
