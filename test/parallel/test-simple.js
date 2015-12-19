@@ -1,7 +1,6 @@
-
+'use strict';
 const assert = require('assert');
 const fixtures = require('../../lib/index.js');
-fixtures.use('case1');
 
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017/test';
@@ -21,6 +20,9 @@ after(function () {
 });
 
 describe('case1', function () {
+  beforeEach(function () {
+    fixtures.use('case1');
+  });
   it('test the documents', function (next) {
     db.collection('foo').find({}).toArray(function (err, docs) {
       assert.equal(docs.length, 2);
@@ -67,8 +69,7 @@ describe('multi-files', function () {
       const expect = fixtures.get('foo');
       assert.equal(docs.length, 1);
       assert.ok(docs[0]._id);
-      delete docs[0]._id;
-      assert.deepEqual(docs, expect);
+      assert.equal(docs[0].bar, expect[0].bar);
       next();
     });
   });
@@ -77,8 +78,7 @@ describe('multi-files', function () {
       const expect = fixtures.get('bar');
       assert.equal(docs.length, 1);
       assert.ok(docs[0]._id);
-      delete docs[0]._id;
-      assert.deepEqual(docs, expect);
+      assert.equal(docs[0].bar, expect[0].bar);
       next();
     });
   });
