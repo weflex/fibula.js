@@ -74,6 +74,22 @@ The above code would output:
 
 which is defined at [Write fixtures](#write-fixtures) by us.
 
+### Async method
+
+call `fixtures.use` in above way will do actions with adapters like MongoDB in blocking way, that means you will need
+more time to complete your operations. To improve this problem, Fibula.js as well as provides non-blocking method.
+
+An example to show how non-blocking code works with Mocha or Jasmine:
+
+```
+beforeEach(function (next) {
+  fixtures.use('case1', next);
+});
+```
+
+As the above lines looks, you should pass a callback as 2nd of `.use` arguments, but in async mode, developers should
+take more care of stuffs in concurrent.
+
 ### Typed fixture
 
 Usually the fixutures seems to be consist of `.json` files, namely only string can be defined. Fibula.js as well
