@@ -76,8 +76,8 @@ which is defined at [Write fixtures](#write-fixtures) by us.
 
 ### Async method
 
-call `fixtures.use` in above way will do actions with adapters like MongoDB in blocking way, that means you will need
-more time to complete your operations. To improve this problem, Fibula.js as well as provides non-blocking method.
+Calling `fixtures.use` in above way will do actions with adapters like MongoDB in a blocking way, that means you will need
+more time to complete your operations. To address this problem, Fibula.js as well as provides non-blocking method.
 
 An example to show how non-blocking code works with Mocha or Jasmine:
 
